@@ -2,6 +2,7 @@ name: Update Major Version Tag After Release
 
 permissions:
   contents: write # Required for updating tags
+  actions: write # Required for updating tags
 
 on:
   workflow_dispatch:
