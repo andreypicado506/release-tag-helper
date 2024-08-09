@@ -41,8 +41,10 @@ jobs:
           TARGET="${{ github.event.release.tag_name }}"
           MAJOR_VERSION="$(echo $TARGET | cut -d '.' -f1)"
         fi
+        echo "Target tag: $TARGET, Major Version Tag: $MAJOR_VERSION"
         echo "TARGET=$TARGET" >> $GITHUB_ENV
         echo "MAJOR_VERSION=$MAJOR_VERSION" >> $GITHUB_ENV
+
     - name: Git config
       run: |
         git config user.name "github-actions[bot]"
